@@ -8,10 +8,13 @@
 
 //广告Cell
 #import <UIKit/UIKit.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AdvertCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet GADBannerView *adBannerView;
+
 + (CGFloat)rowHeight;
-+ (instancetype)cellWithTableView:(UITableView *)tableView vc:(UIViewController *)vc;
++ (instancetype)cellWithTableView:(UITableView *)tableView vc:(UIViewController *)vc adKey:(NSString *)adKey adType:(NSInteger)adType;
 
 @end

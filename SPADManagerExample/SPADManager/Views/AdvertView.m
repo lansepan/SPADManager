@@ -7,13 +7,8 @@
 //
 
 #import "AdvertView.h"
-#import "ADManager.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AdvertView()
-
-@property (nonatomic, weak) IBOutlet GADBannerView *adBannerView;
-
 
 @end
 
@@ -41,14 +36,14 @@
     return v;
 }
 
-- (void)setData:(UIViewController *)vc
+- (void)setData:(UIViewController *)vc adKey:(NSString *)adKey adType:(NSInteger)adType
 {
-    if([ADManager sharedInstance].adType==AdTypeAdmob)
+    if(adType==0)
     {
         self.adBannerView.hidden = NO;
-        self.adBannerView.adUnitID = [ADManager sharedInstance].adKey;
+        self.adBannerView.adUnitID = adKey;
         self.adBannerView.rootViewController = vc;
-        [self.adBannerView loadRequest:[GADRequest request]];
+//        [self.adBannerView loadRequest:[GADRequest request]];
     }
 }
 

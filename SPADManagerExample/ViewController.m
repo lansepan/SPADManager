@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "AdvertCell.h"
 #import "AdvertView.h"
+#import "AppDelegate.h"
 
 @import GoogleMobileAds;
 @class GADBannerView;
@@ -37,7 +38,8 @@
     
     AdvertView *advertView = [AdvertView getView:self.viewAd];
     [self.viewAd addSubview:advertView];
-    [advertView setData:self];
+    [advertView setData:self adKey:@"ca-app-pub-3940256099942544/2934735716" adType:0];
+    [advertView.adBannerView loadRequest:[GADRequest request]];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -63,7 +65,8 @@
 {
     if(indexPath.row==0)
     {
-        AdvertCell *cell = [AdvertCell cellWithTableView:tableView vc:self];
+        AdvertCell *cell = [AdvertCell cellWithTableView:tableView vc:self adKey:@"ca-app-pub-3940256099942544/2934735716" adType:0];
+        [cell.adBannerView loadRequest:[GADRequest request]];
         return cell;
     }
     else

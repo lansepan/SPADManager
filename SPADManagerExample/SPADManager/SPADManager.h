@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "ADManager.h"
-#import "AdvertCell.h"
-#import "AdvertView.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface SPADManager <NSObject>
 

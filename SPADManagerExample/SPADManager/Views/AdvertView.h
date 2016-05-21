@@ -8,10 +8,13 @@
 
 //广告view
 #import <UIKit/UIKit.h>
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AdvertView : UIView
 
+@property (nonatomic, weak) IBOutlet GADBannerView *adBannerView;
+
 + (instancetype)getView:(UIView *)view;
-- (void)setData:(UIViewController *)vc;
+- (void)setData:(UIViewController *)vc adKey:(NSString *)adKey adType:(NSInteger)adType;
 
 @end

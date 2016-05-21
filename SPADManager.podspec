@@ -23,12 +23,4 @@ s.subspec 'SPViews' do |ss|
 ss.source_files = 'SPADManagerExample/SPADManager/Views/*.{h,m,xib}'
 end
 
-s.subspec 'SPAdMob' do |ss|
-ss.source_files = 'SPADManagerExample/SPADManager/AdMob/*.{h,m}'
-end
-
-s.subspec 'SPDomMob' do |ss|
-ss.source_files = 'SPADManagerExample/SPADManager/DomMob/*.{h,m}'
-end
-
 end

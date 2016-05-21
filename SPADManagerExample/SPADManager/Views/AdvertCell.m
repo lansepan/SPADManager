@@ -7,12 +7,8 @@
 //
 
 #import "AdvertCell.h"
-#import "ADManager.h"
-#import <GoogleMobileAds/GoogleMobileAds.h>
 
 @interface AdvertCell()
-
-@property (nonatomic, weak) IBOutlet GADBannerView *adBannerView;
 
 @end
 
@@ -33,7 +29,7 @@
     return 51;
 }
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView vc:(UIViewController *)vc
++ (instancetype)cellWithTableView:(UITableView *)tableView vc:(UIViewController *)vc adKey:(NSString *)adKey adType:(NSInteger)adType
 {
     static NSString *cellId = @"AdvertCell";
     AdvertCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
@@ -42,19 +38,19 @@
         UINib *nib = [UINib nibWithNibName:cellId bundle:nil];
         [tableView registerNib:nib forCellReuseIdentifier:cellId];
         cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-        [cell setData:vc];
+        [cell setData:vc adKey:adKey adType:adType];
     }
     return cell;
 }
 
-- (void)setData:(UIViewController *)vc
+- (void)setData:(UIViewController *)vc adKey:(NSString *)adKey adType:(NSInteger)adType
 {
-    if([ADManager sharedInstance].adType==AdTypeAdmob)
+    if(adType==0)
     {
         self.adBannerView.hidden = NO;
-        self.adBannerView.adUnitID = [ADManager sharedInstance].adKey;
+        self.adBannerView.adUnitID = adKey;
         self.adBannerView.rootViewController = vc;
-        [self.adBannerView loadRequest:[GADRequest request]];
+        //[self.adBannerView loadRequest:[GADRequest request]];
     }
 }
 
