@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ADManager.h"
 
 @interface SPADManager <NSObject>
 
