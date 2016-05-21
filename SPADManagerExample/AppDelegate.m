@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ADManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[ADManager sharedInstance] registerAd:@"ca-app-pub-3940256099942544/2934735716" type:AdTypeAdmob];
     return YES;
 }
 

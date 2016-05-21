@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AdvertCell" id="mHo-bO-3sz" customClass="AdvertCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mHo-bO-3sz" id="gUl-Xg-rP7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O6m-sH-Fa1" userLabel="adBannerView" customClass="GADBannerView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="O6m-sH-Fa1" firstAttribute="top" secondItem="gUl-Xg-rP7" secondAttribute="top" id="4zs-h4-ijS"/>
+                    <constraint firstAttribute="bottom" secondItem="O6m-sH-Fa1" secondAttribute="bottom" constant="0.5" id="TPa-pP-HPP"/>
+                    <constraint firstItem="O6m-sH-Fa1" firstAttribute="leading" secondItem="gUl-Xg-rP7" secondAttribute="leading" id="XKQ-hp-ekc"/>
+                    <constraint firstAttribute="trailing" secondItem="O6m-sH-Fa1" secondAttribute="trailing" id="gZn-xn-BfK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adBannerView" destination="O6m-sH-Fa1" id="auU-Tq-I6G"/>
+            </connections>
+            <point key="canvasLocation" x="349" y="366"/>
+        </tableViewCell>
+    </objects>
+</document>

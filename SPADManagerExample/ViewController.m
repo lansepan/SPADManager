@@ -7,39 +7,81 @@
 //
 
 #import "ViewController.h"
+#import "AdvertCell.h"
+#import "AdvertView.h"
 
 @import GoogleMobileAds;
 @class GADBannerView;
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property(nonatomic, weak) IBOutlet GADBannerView *bannerView;
+@property(nonatomic, weak) IBOutlet UIView *viewAd;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";
-    self.bannerView.rootViewController = self;
-    [self.bannerView loadRequest:[GADRequest request]];
+    AdvertView *advertView = [AdvertView getView:self.viewAd];
+    [self.viewAd addSubview:advertView];
+    [advertView setData:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDataSource Methods
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 50;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row==0)
+    {
+        return [AdvertCell rowHeight];
+    }
+    else
+    {
+        return 44;
+    }
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row==0)
+    {
+        AdvertCell *cell = [AdvertCell cellWithTableView:tableView vc:self];
+        return cell;
+    }
+    else
+    {
+        static NSString *cellId = @"CellId";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        if(!cell)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        }
+        cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+        return cell;
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
 
 @end

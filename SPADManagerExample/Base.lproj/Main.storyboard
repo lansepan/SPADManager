@@ -17,28 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-9h-3zN" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g8Y-9h-3zN" userLabel="viewAd">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.1960784314" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hEY-Pp-M35"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="22h-nB-oOb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="EsK-vP-1Wp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hQP-da-ZHZ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g8Y-9h-3zN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1QM-fz-jB6"/>
+                            <constraint firstItem="22h-nB-oOb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Wx-Pq-9hm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g8Y-9h-3zN" secondAttribute="bottom" id="MZO-ce-gZG"/>
+                            <constraint firstItem="22h-nB-oOb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RKF-J3-vss"/>
+                            <constraint firstAttribute="trailing" secondItem="22h-nB-oOb" secondAttribute="trailing" id="cUb-76-UE5"/>
                             <constraint firstAttribute="trailing" secondItem="g8Y-9h-3zN" secondAttribute="trailing" id="qKE-aJ-T2J"/>
+                            <constraint firstItem="g8Y-9h-3zN" firstAttribute="top" secondItem="22h-nB-oOb" secondAttribute="bottom" id="red-bd-SBL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bannerView" destination="g8Y-9h-3zN" id="Q4a-wP-7KQ"/>
+                        <outlet property="viewAd" destination="g8Y-9h-3zN" id="UIf-zk-aWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180.80000000000001" y="300.09333333333331"/>
+            <point key="canvasLocation" x="180" y="300"/>
         </scene>
     </scenes>
 </document>

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7C618856E1BD73D3C3999263 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7A6860F36502292C56358B /* libPods.a */; };
+		8100613C1CEFFE17004C88E4 /* AdvertInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8100613B1CEFFE17004C88E4 /* AdvertInfo.m */; };
+		810061531CF066EB004C88E4 /* AdvertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8100614E1CF066EB004C88E4 /* AdvertCell.m */; };
+		810061541CF066EB004C88E4 /* AdvertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8100614F1CF066EB004C88E4 /* AdvertCell.xib */; };
+		810061551CF066EB004C88E4 /* AdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810061511CF066EB004C88E4 /* AdvertView.m */; };
+		810061561CF066EB004C88E4 /* AdvertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810061521CF066EB004C88E4 /* AdvertView.xib */; };
+		810061601CF06C33004C88E4 /* ADManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8100615F1CF06C33004C88E4 /* ADManager.m */; };
 		818005B31CEF08690063DA43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 818005B21CEF08690063DA43 /* main.m */; };
 		818005B61CEF08690063DA43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 818005B51CEF08690063DA43 /* AppDelegate.m */; };
 		818005BC1CEF08690063DA43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 818005BA1CEF08690063DA43 /* Main.storyboard */; };
@@ -21,6 +27,16 @@
 /* Begin PBXFileReference section */
 		2B7A6860F36502292C56358B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		392CC609B7B8152D4F4312E1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8100613A1CEFFE17004C88E4 /* AdvertInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertInfo.h; sourceTree = "<group>"; };
+		8100613B1CEFFE17004C88E4 /* AdvertInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertInfo.m; sourceTree = "<group>"; };
+		8100614D1CF066EB004C88E4 /* AdvertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertCell.h; sourceTree = "<group>"; };
+		8100614E1CF066EB004C88E4 /* AdvertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertCell.m; sourceTree = "<group>"; };
+		8100614F1CF066EB004C88E4 /* AdvertCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertCell.xib; sourceTree = "<group>"; };
+		810061501CF066EB004C88E4 /* AdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertView.h; sourceTree = "<group>"; };
+		810061511CF066EB004C88E4 /* AdvertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertView.m; sourceTree = "<group>"; };
+		810061521CF066EB004C88E4 /* AdvertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvertView.xib; sourceTree = "<group>"; };
+		8100615E1CF06C33004C88E4 /* ADManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADManager.h; sourceTree = "<group>"; };
+		8100615F1CF06C33004C88E4 /* ADManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADManager.m; sourceTree = "<group>"; };
 		818005AE1CEF08690063DA43 /* SPADManagerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPADManagerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		818005B21CEF08690063DA43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		818005B41CEF08690063DA43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +67,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		810061391CEFFDE8004C88E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8100613A1CEFFE17004C88E4 /* AdvertInfo.h */,
+				8100613B1CEFFE17004C88E4 /* AdvertInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8100614C1CF066EB004C88E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8100614D1CF066EB004C88E4 /* AdvertCell.h */,
+				8100614E1CF066EB004C88E4 /* AdvertCell.m */,
+				8100614F1CF066EB004C88E4 /* AdvertCell.xib */,
+				810061501CF066EB004C88E4 /* AdvertView.h */,
+				810061511CF066EB004C88E4 /* AdvertView.m */,
+				810061521CF066EB004C88E4 /* AdvertView.xib */,
+				8100615E1CF06C33004C88E4 /* ADManager.h */,
+				8100615F1CF06C33004C88E4 /* ADManager.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		818005A51CEF08690063DA43 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +137,8 @@
 		818005C81CEF08950063DA43 /* SPADManager */ = {
 			isa = PBXGroup;
 			children = (
+				8100614C1CF066EB004C88E4 /* Views */,
+				810061391CEFFDE8004C88E4 /* Model */,
 				818005C91CEF08950063DA43 /* AdMob */,
 				818005CC1CEF08950063DA43 /* DomMob */,
 				818005CF1CEF08950063DA43 /* SPADManager.h */,
@@ -200,8 +242,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				818005C11CEF08690063DA43 /* LaunchScreen.storyboard in Resources */,
+				810061541CF066EB004C88E4 /* AdvertCell.xib in Resources */,
 				818005BE1CEF08690063DA43 /* Assets.xcassets in Resources */,
 				818005BC1CEF08690063DA43 /* Main.storyboard in Resources */,
+				810061561CF066EB004C88E4 /* AdvertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				818005D01CEF08950063DA43 /* Ad.m in Sources */,
+				8100613C1CEFFE17004C88E4 /* AdvertInfo.m in Sources */,
+				810061551CF066EB004C88E4 /* AdvertView.m in Sources */,
 				818005B61CEF08690063DA43 /* AppDelegate.m in Sources */,
 				818005B31CEF08690063DA43 /* main.m in Sources */,
 				818005D11CEF08950063DA43 /* Dom.m in Sources */,
+				810061531CF066EB004C88E4 /* AdvertCell.m in Sources */,
+				810061601CF06C33004C88E4 /* ADManager.m in Sources */,
 				81DBDFDB1CEF1DEA009A896D /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
